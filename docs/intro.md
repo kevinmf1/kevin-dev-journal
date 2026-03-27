@@ -16,7 +16,7 @@ This documentation section contains:
 
 ## About Me
 
-I'm Kevin Malik Fajar, a software developer. You can find me on:
+I'm Kevin Malik Fajar, a Mobile Developer. You can find me on:
 
 - [LinkedIn](https://www.linkedin.com/in/kevinmalikfajar/)
 - [GitHub](https://github.com/kevinmf1)
