@@ -1,19 +1,24 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+android:
+  label: Android
+  permalink: /android
+  description: Android development related posts
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+kotlin:
+  label: Kotlin
+  permalink: /kotlin
+  description: Kotlin programming language posts
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+devlog:
+  label: Devlog
+  permalink: /devlog
+  description: Development log and progress updates
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+til:
+  label: TIL
+  permalink: /til
+  description: Today I Learned posts
+
+tutorial:
+  label: Tutorial
+  permalink: /tutorial
+  description: Tutorial and how-to posts
