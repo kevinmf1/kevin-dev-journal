@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -66,9 +66,26 @@ const config: Config = {
     ],
   ],
 
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['en'],
+        indexBlog: true,
+        indexDocs: true,
+        indexPages: false,
+        docsRouteBasePath: '/docs',
+        blogRouteBasePath: '/blog',
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 8,
+        searchResultContextMaxLength: 50,
+      },
+    ],
+  ],
+
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/k-logo.png',
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -76,20 +93,21 @@ const config: Config = {
       title: 'Kevin Dev Journal',
       logo: {
         alt: 'Kevin Dev Journal Logo',
-        src: 'img/logo.svg',
+        src: 'img/k-logo.png',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/kevinmf1/kevin-dev-journal',
-          label: 'GitHub',
+          href: 'https://github.com/kevinmf1',
           position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub',
         },
       ],
     },
@@ -97,28 +115,36 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Content',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Docs',
               to: '/docs/intro',
+            },
+            {
+              label: 'Blog',
+              to: '/blog',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Social',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/kevinmalikfajar/',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'GitHub',
+              href: 'https://github.com/kevinmf1',
+            },
+            {
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/users/14845709/kevin-malik-fajar',
             },
             {
               label: 'X',
-              href: 'https://x.com/docusaurus',
+              href: 'https://x.com/kevin19z9',
             },
           ],
         },
@@ -126,17 +152,13 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
+              label: 'GitHub Repository',
               href: 'https://github.com/kevinmf1/kevin-dev-journal',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Kevin Dev Journal. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Kevin Dev Journal.`,
     },
     prism: {
       theme: prismThemes.github,
