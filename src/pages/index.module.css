@@ -20,4 +20,45 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heroLogo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+  transition: transform 0.3s ease;
+}
+
+.heroLogo:hover {
+  transform: scale(1.05);
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ifm-hero-text-color);
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.socialLink:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  color: var(--ifm-hero-text-color);
+  text-decoration: none;
 }
